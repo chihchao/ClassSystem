@@ -1,0 +1,1 @@
+ALTER TABLE `teacher` ADD `function` VARCHAR( 40 ) DEFAULT 'abcdefg' AFTER `apply_time` ;

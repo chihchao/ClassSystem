@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Example of HTMLArea 3.0</title>
+
+<script type="text/javascript">
+//設定 htmlarea 的目錄
+_editor_url = "./";
+_editor_lang = "b5";
+</script>
+<script type="text/javascript" src="./htmlarea.js">
+//設定 hemlarea.js 所在的地點
+</script>
+<script type="text/javascript" defer="1">
+var config = new HTMLArea.Config();
+config.toolbar = [
+	[ "fontname", "space",
+	  "fontsize", "space",
+	  "formatblock", "space",
+	  "bold", "italic", "underline", "strikethrough", "separator",
+	  "subscript", "superscript", "separator",
+	  "copy", "cut", "paste", "space", "undo", "redo" ],
+
+	[ "justifyleft", "justifycenter", "justifyright", "justifyfull", "separator",
+	  "insertorderedlist", "insertunorderedlist", "outdent", "indent", "separator",
+	  "forecolor", "hilitecolor", "separator",
+	  "inserthorizontalrule", "createlink", "insertimage", "inserttable", "htmlmode", "separator",
+	  "about" ]
+];
+config.popupURL = "popups/b5/";
+config.statusBar = false;
+HTMLArea.replace('ta', config);
+</script>
+
+</head>
+
+<body>
+
+<TABLE width="100%" border="0" bgcolor="#000080" cellpadding="0" cellspacing="1"><TR><TD bgcolor="#FFFFFF">
+<textarea id="ta" name="ta_name" style="width:100%" rows="20" cols="80"></textarea>
+</TD></TR></TABLE>
+
+
+</body>
+</html>

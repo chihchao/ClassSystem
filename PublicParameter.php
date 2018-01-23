@@ -1,0 +1,96 @@
+<?
+//資料庫設定
+$DATABASE_URL = "localhost";
+$DATABASE_USER = "jcpsms";
+$DATABASE_PASSWORD = "2180.kh";
+$DATABASE_BASE = "ClassSystem";
+
+//管理所有班級網頁密碼，如果空白表示不需密碼
+$MANAGE_PASSWORD = "mp.system";
+//申請網頁密碼，如果空白表示不需密碼
+$APPLY_PASSWORD = "gogogo";
+
+//年級及班級名稱設定
+$GRADE_ARRAY[1] = "1";
+$GRADE_ARRAY[2] = "2";
+$GRADE_ARRAY[3] = "3";
+$GRADE_ARRAY[4] = "4";
+$GRADE_ARRAY[5] = "5";
+$GRADE_ARRAY[6] = "6";
+$GRADE_ARRAY[7] = "科任";
+$GRADE_ARRAY[8] = "學年";
+$CLASS_NUMBER_ARRAY[1] = "1";
+$CLASS_NUMBER_ARRAY[2] = "2";
+$CLASS_NUMBER_ARRAY[3] = "3";
+$CLASS_NUMBER_ARRAY[4] = "4";
+$CLASS_NUMBER_ARRAY[5] = "5";
+$CLASS_NUMBER_ARRAY[6] = "6";
+$CLASS_NUMBER_ARRAY[7] = "7";
+$CLASS_NUMBER_ARRAY[8] = "8";
+$CLASS_NUMBER_ARRAY[9] = "9";
+$CLASS_NUMBER_ARRAY[10] = "10";
+$CLASS_NUMBER_ARRAY[11] = "11";
+$CLASS_NUMBER_ARRAY[12] = "12";
+$CLASS_NUMBER_ARRAY[13] = "13";
+$CLASS_NUMBER_ARRAY[14] = "14";
+$CLASS_NUMBER_ARRAY[15] = "15";
+
+//留言區每頁顯示留言數
+$PERPAGE_MESSAGE_NUMBER = "15";
+//討論區每頁顯示主題數
+$PERPAGE_SUBJECT_NUMBER = "25";
+//討論區每頁顥示回應數
+$PERPAGE_REPLY_NUMBER = "15";
+
+//佈景類型顏色設定
+//第一種佈景類型
+$HOMEPAGE[0]["BGCOLOR1"] = "#60CBFF";
+$HOMEPAGE[0]["BGCOLOR2"] = "#0080C0";
+$HOMEPAGE[0]["BGCOLOR3"] = "#005680";
+//第二種佈景類型
+$HOMEPAGE[1]["BGCOLOR1"] = "#FFFFD0";
+$HOMEPAGE[1]["BGCOLOR2"] = "#D08C00";
+$HOMEPAGE[1]["BGCOLOR3"] = "#5C3C00";
+//第三種佈景類型
+$HOMEPAGE[2]["BGCOLOR1"] = "#A0F0C8";
+$HOMEPAGE[2]["BGCOLOR2"] = "#519760";
+$HOMEPAGE[2]["BGCOLOR3"] = "#0A3C1E";
+
+//各區權限設定，等級分為 teacher, manager, classuser, everybody
+//文件區的權限設定
+$PAGE_AUTHENTICATE_USER["DOCUMENT"]["ADD"] = "teacher";
+$PAGE_AUTHENTICATE_USER["DOCUMENT"]["DELETE"] = "teacher";
+$PAGE_AUTHENTICATE_USER["DOCUMENT"]["EDIT"] = "teacher";
+$PAGE_AUTHENTICATE_USER["DOCUMENT"]["MOVE"] = "teacher";
+//相片區的權限設定
+$PAGE_AUTHENTICATE_USER["PHOTO"]["ADD"] = "teacher";
+$PAGE_AUTHENTICATE_USER["PHOTO"]["DELETE"] = "teacher";
+$PAGE_AUTHENTICATE_USER["PHOTO"]["EDIT"] = "teacher";
+$PAGE_AUTHENTICATE_USER["PHOTO"]["MOVE"] = "teacher";
+//連結區的權限設定
+$PAGE_AUTHENTICATE_USER["LINK"]["ADD"] = "teacher";
+$PAGE_AUTHENTICATE_USER["LINK"]["DELETE"] = "teacher";
+$PAGE_AUTHENTICATE_USER["LINK"]["EDIT"] = "teacher";
+$PAGE_AUTHENTICATE_USER["LINK"]["MOVE"] = "teacher";
+//公告區的權限設定
+$PAGE_AUTHENTICATE_USER["BOARD"]["POST"] = "manager";
+$PAGE_AUTHENTICATE_USER["BOARD"]["DELETE"] = "manager";
+$PAGE_AUTHENTICATE_USER["BOARD"]["EDIT"] = "manager";
+//行事曆的權限設定
+$PAGE_AUTHENTICATE_USER["CALENDAR"]["POST"] = "manager";
+$PAGE_AUTHENTICATE_USER["CALENDAR"]["DELETE"] = "manager";
+$PAGE_AUTHENTICATE_USER["CALENDAR"]["EDIT"] = "manager";
+//討論區的權限設定
+$PAGE_AUTHENTICATE_USER["DISCUSS"]["POST"] = "classuser";
+$PAGE_AUTHENTICATE_USER["DISCUSS"]["REPLY"] = "classuser";
+$PAGE_AUTHENTICATE_USER["DISCUSS"]["DELETE"] = "teacher";
+//留言區的權限設定
+$PAGE_AUTHENTICATE_USER["MESSAGE"]["POST"] = "everybody";
+$PAGE_AUTHENTICATE_USER["MESSAGE"]["DELETE"] = "teacher";
+$PAGE_AUTHENTICATE_USER["MESSAGE"]["REPLY"] = "teacher";
+//管理區的權限設定
+$PAGE_AUTHENTICATE_USER["MANAGE"]["EDIT"] = "teacher";
+
+//防止留言區垃圾留言欄位名稱，值可任意設，也可隨時修改
+$MESSAGE_NOSPAMMER_VALUE = 'twoeivefq';
+?>

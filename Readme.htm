@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<TITLE>ClassSystem V2 Readme</TITLE>
+</HEAD>
+<style>
+<!--
+A:link		{text-decoration: none; color: #0000A0}
+A:visited	{text-decoration: none; color: #0000A0}
+A:active	{text-decoration: none; color: #0000A0}
+A:hover		{text-decoration: underline; color: #0000A0}
+Body		{font-size: 8pt; font-family: Verdana, Arial, Tahoma, Helvetica, sans-serif}
+Table		{font-size: 8pt; font-family: Verdana, Arial, Tahoma, Helvetica, sans-seri}
+-->
+</style>
+<BODY BGCOLOR="#FFFFFF">
+<CENTER>ClassSystem V2 Readme<BR>（for PHP4.2）</CENTER>
+<TABLE border="0" cellpadding="5" cellspacing="5" align="center">
+  <TR> 
+    <TD><a href="#p1">系統需求</a></TD>
+    <TD><a href="#p2">修改事項</a></TD>
+    <TD><a href="#p3">升級方式</a></TD>
+    <TD><a href="#p4">安裝方式</a></TD>
+    <TD><a href="#p5">版本修改</a></TD>
+  </TR>
+</TABLE>
+
+<UL>
+  <LI><a name="p1">系統需求</a> 
+</UL>
+<blockquote> 
+  <ol>
+    <li>PHP4</li>
+    <li>MySQL</li>
+  </ol>
+</blockquote>
+<UL>
+  <LI><a name="p2">修改事項</a> 
+</UL>
+<blockquote> 
+  <ol>
+    <li>修正在 PHP4.2 以後版本，讀取不到變數及出現警告字句的問題。</li>
+    <li>修正在 PHP4.2 以後版本，編輯文件、相片、管理設定時，如未上傳檔案，會誤刪附檔及圖片的問題。</li>
+    <li>解決 UTF-8 中文檔案名稱無法連結的問題。</li>
+    <li>新增教師可自行刪除首頁圖片的功能。</li>
+    <li>新增首頁圖片及相片區可採用 Flash 的 SWF 檔。</li>
+    <li>新增刪除文件附檔的功能。</li>
+    <li>新增搬移連結的功能。</li>
+    <li>新增編輯行事曆各項記事的功能。</li>
+    <li>可直接在 PublicParameter.php 中修改年級及班級名稱。</li>
+  </ol>
+</blockquote>
+<UL>
+  <LI><a name="p3">升級方式</a> 
+</UL>
+<blockquote> 
+  <ol>
+    <li>進入 MySQL 的班級網頁資料庫，執行 ClassSystemV2_update.sql。</li>
+    <li>刪除原有目錄中的 PHP 檔及 Images 目錄（不要刪除 UploadDocument, UploadHomepage, UploadPhoto 
+      內的檔案），然後將 ClassSystemV2.zip 解壓縮，並將目錄下的 PHP 檔及 Images 目錄複製到原本安裝的目錄中。</li>
+    <li>修改 PublicParameter.php 
+      <ol>
+        <li>修改連結資料庫的使用者名稱，密碼，資料庫名稱($DATABASE_URL; $DATABASE_USER; $DATABASE_PASSWORD; 
+          $DATABASE_BASE)。</li>
+        <li>修改管理所有網頁密碼($MANAGE_PASSWORD; 管理者可刪除某班班級頁或更改班級教師密碼)。</li>
+        <li>修改申請班級網頁密碼($APPLY_PASSWORD)。</li>
+        <li>修改年級名稱及班級名稱($GRADE_ARRAY; $CLASS_NUMBER_ARRAY)。</li>
+      </ol>
+    </li>
+  </ol>
+</blockquote>
+<UL>
+  <LI><a name="p4">安裝方式</a> 
+</UL>
+<blockquote> 
+  <ol>
+    <li>將程式解壓縮放在 web 伺服器網頁目錄下。</li>
+    <li>在 MySQL 中建一資料庫。</li>
+    <li>在 MySQL 剛建立的資料庫中執行 ClassSystemV2.sql 建立資料表格。</li>
+    <li>修改 PublicParameter.php 
+      <ol>
+        <li>修改連結資料庫的使用者名稱，密碼，資料庫名稱($DATABASE_URL; $DATABASE_USER; $DATABASE_PASSWORD; 
+          $DATABASE_BASE)。</li>
+        <li>修改管理所有網頁密碼($MANAGE_PASSWORD; 管理者可刪除某班班級頁或更改班級教師密碼)。</li>
+        <li>修改申請班級網頁密碼($APPLY_PASSWORD)。</li>
+        <li>修改年級名稱及班級名稱($GRADE_ARRAY; $CLASS_NUMBER_ARRAY)。</li>
+      </ol>
+    </li>
+    <li>修改 UploadDocument 的權限，目錄擁有者改為 apache。</li>
+    <li>修改 UploadHomepage 的權限，目錄擁有者改為 apache。</li>
+    <li>修改 UploadPhoto 的權限，目錄擁有者改為 apache。</li>
+    <li>上傳檔案的大小受限於 php.ini 的 upload_max_filesize，內定是 2M，如果想讓老師上傳更大的檔案，就更改這個設定值並重新啟動 
+      apache 即可。</li>
+  </ol>
+</blockquote>
+<ul>
+  <li><a name="p5">版本修改v2.1</a> -- By 蔡俊彥 
+    <ol>
+      <li>修改HTTP HEADER認證方式，改以Web界面認證，使IIS+PHP4系統可以使用。</li>
+      <li>選單增加登出功能。</li>
+      <li>管理區增加可以選擇開放功能。</li>
+    </ol>
+</ul>
+<blockquote> 
+  <p>&nbsp;</p>
+</blockquote>
+
+</BODY>
+</HTML>
